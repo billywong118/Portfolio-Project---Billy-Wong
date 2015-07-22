@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link href='http://fonts.googleapis.com/css?family=Ubuntu:400,500,700' rel='stylesheet' type='text/css'>
+<link type="text/css" rel="stylesheet" href="portstyle.css">
+<title>Contact Me</title>
+<head>
+<body bgcolor="#ffc">
+
+<div id="left"></div>
+<div id="right"></div>
+<div id="top"></div>
+<div id="bottom"></div>
+
+<div id="name">
+<p>Billy Wong</p>
+<p>Portfolio Page</p> 
+</div>
+
+<div id="header">
+<ul>
+	<li><a href="Portfolio_Page_Billy_Wong-home.html">Home</a></li>
+	<li><a href="Portfolio_Page_Billy_Wong-about-me.html">About Me</a></li>
+	<li><a href="Portfolio_Page_Billy_Wong-contact.html" class="on">Contact</a></li>
+</ul>
+</div>
+
+<div id="main">
+
+<div id="main-contact">
+
+<table>
+<tr>
+
+<td class="contact-text">
+<h3>General Info</h3>
+<p>I am currently a student during the months of September to June. I am available on most nights. During the summer, I may or may not be busy. Please contact me if you want to know about my availablity.</p>
+<p></p>
+<p>Please contact me via email at most times.</p>
+</br>
+<p>Up until September 9, 2015, here are my usual weekly availability times. Choose a day to show the hours in which I am free for that day.</p>
+
+<select id="day" onchange="free()">
+<option disabled selected>Choose a day</option>
+<option>Sunday</option>
+<option>Monday</option>
+<option>Tuesday</option>
+<option>Wednesday</option>
+<option>Thursday</option>
+<option>Friday</option>
+<option>Saturday</option>
+</select>
+
+<p id="freetime">Hours in which I will be available for the selected day will be shown here.</p>
+</td>
+
+<td class="contact-info">
+<h3>Contact Details</h3>
+<p>Email: billywong118@gmail.com</p>
+<p>Phone: None</p>
+<p>Facebook: Billy Wong</p>
+</td>
+
+</tr>
+</table>
+
+<footer>
+<div>
+</div>
+<a href="https://www.facebook.com/billy.a.wong"><img src="fblogo.jpg"/></a>
+<p>Copyright 2015 Billy Wong.</p>
+</footer>
+
+</div>
+
+</div>
+
+<script>
+
+function free() {
+	var show = document.getElementById("freetime");
+	var day = document.getElementById("day").value;
+	var sunday = "10:00AM to 11:00PM";
+	var monday = "5:00PM to 11:00PM";
+	var tuesday = "10:00AM to 4:30PM, 9:30PM to 11:00PM";
+	var wednesday = "6:00PM to 11:00PM";
+	var thursday = tuesday;
+	var friday = monday;
+	var saturday = sunday;
+	switch (day) {
+		case "Sunday":
+			show.innerHTML = sunday;
+			break;
+		case "Monday":
+			show.innerHTML = monday;
+			break;
+		case "Tuesday":
+			show.innerHTML = tuesday;
+			break;
+		case "Wednesday":
+			show.innerHTML = wednesday;
+			break;
+		case "Thursday":
+			show.innerHTML = thursday;
+			break;
+		case "Friday":
+			show.innerHTML = friday;
+			break;
+		case "Saturday":
+			show.innerHTML = saturday;
+			break;
+	}
+}
+
+</script>
+
+</body>
+</html>
